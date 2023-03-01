@@ -21,7 +21,8 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-const HDWallet = require("@truffle/hdwallet-provider");
+// const HDWallet = require("./app/node_modules/@truffle/hdwallet-provider");
+const HDWallet = require("./app/node_modules/truffle-hdwallet-provider");
 
 module.exports = {
   /**
@@ -47,11 +48,12 @@ module.exports = {
       network_id: "*", // Any network (default: none)
     },
     goerli: {
+      networkCheckTimeout: 10000,
       provider: () =>
         new HDWallet(process.env.MNEMONIC, process.env.INFURA_API_KEY),
       network_id: "5",
       gas: 4500000,
-      gasPrice: 61401353237,
+      gasPrice: 8363488687,
     },
     // Another network with more advanced options...
     // advanced: {
@@ -90,15 +92,16 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.4.24", // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
+      // settings: {
+      //   optimizer: {
+      //     enabled: true, // Default: false
+      //     runs: 1000, // Default: 200
+      //   },
+
+      //   // evmVersion: "byzantium",
+      // },
     },
   },
 };
