@@ -1,13 +1,27 @@
 # ND1309 C2 Ethereum Smart Contracts, Tokens and Dapps - Project Starter 
 **PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.
 
-### Instructions
- - Truffle version ``
- - OpenZeppelin version ``
+## Libraries
+ - Truffle `v5.7.9` 
+ - openzeppelin-solidity `^4.8.1`
+ - truffle-hdwallet-provider `^1.0.6`
+   - Used to securely connect to Metamask
+ - Solidity `^0.4.24`
+ - Node `v14.17.1`
+ - Web3.js `v1.8.2`
+ - ganache `v7.7.5`
+ - dotenv `^16.0.3`  
+   - Used to securely read environment variables form `.env` file
+## IPFS
+
+> Not Used
+>
+## Contract
  - ERC-721 Token Name - `Chaos Star Token`
  - ERC-721 Token Symbol - `KOS`
- - Goerli Network Token Address - 
-
+ - Token Contract Address - `0xe6b9f6c6aB2fd29aE0b9519F303570d4176F8b95`
+ - Address - `0xe6b9f6c6aB2fd29aE0b9519F303570d4176F8b95`
+ - Transaction ID - `0xddefe763b4a204ab31babccadfa4351c44df4d8d69300483aacfb9621685b911`
 
 ### Dependencies
 For this project, you will need to have:

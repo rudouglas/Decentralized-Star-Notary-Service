@@ -22,10 +22,11 @@
  *
  */
 // const HDWallet = require("./app/node_modules/@truffle/hdwallet-provider");
-const HDWallet = require("./app/node_modules/truffle-hdwallet-provider");
-const thingy = require("dotenv").config();
+const HDWallet = require("./app/node_modules/@truffle/hdwallet-provider");
+require("dotenv").config();
 const { MNEMONIC, INFURA_API_KEY } = process.env;
-console.log({thingy})
+
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
