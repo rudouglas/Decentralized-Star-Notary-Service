@@ -8,14 +8,14 @@
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.6.0",
-    "webpack": "^4.28.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.75.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "openzeppelin-solidity": "2.3",
-    "truffle-hdwallet-provider": "^1.0.17",
+    "openzeppelin-solidity": "^4.8.1",
+    "truffle-hdwallet-provider": "^1.0.6",
     "web3": "^1.8.2"
   }
 }

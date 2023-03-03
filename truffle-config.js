@@ -23,7 +23,9 @@
  */
 // const HDWallet = require("./app/node_modules/@truffle/hdwallet-provider");
 const HDWallet = require("./app/node_modules/truffle-hdwallet-provider");
-
+const thingy = require("dotenv").config();
+const { MNEMONIC, INFURA_API_KEY } = process.env;
+console.log({thingy})
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -50,10 +52,17 @@ module.exports = {
     goerli: {
       networkCheckTimeout: 10000,
       provider: () =>
-        new HDWallet(process.env.MNEMONIC, process.env.INFURA_API_KEY),
+        new HDWallet(MNEMONIC, INFURA_API_KEY),
       network_id: "5",
-      gas: 4500000,
-      gasPrice: 8363488687,
+      gas: 4465030,
+      gasPrice: 83634886,
+    },
+    sepolia: {
+      provider: () => new HDWallet(MNEMONIC, INFURA_API_KEY),
+      network_id: 11155111, // Sepolia's id
+      confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
     // Another network with more advanced options...
     // advanced: {
